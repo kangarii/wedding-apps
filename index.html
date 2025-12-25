@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Undangan Pernikahan - Romeo & Juliet</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/luminous-lightbox/2.3.2/luminous-basic.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      body {
+        font-family: "Montserrat", sans-serif;
+        scroll-behavior: smooth;
+      }
+      .font-wedding {
+        font-family: "Great Vibes", cursive;
+      }
+      .font-serif {
+        font-family: "Playfair Display", serif;
+      }
+
+      /* Hiasan Bunga (Floral) */
+      .floral-corner {
+        position: absolute;
+        width: 150px;
+        opacity: 0.6;
+        pointer-events: none;
+        z-index: 10;
+      }
+      .floral-top-left {
+        top: 0;
+        left: 0;
+        transform: rotate(0deg);
+      }
+      .floral-bottom-right {
+        bottom: 0;
+        right: 0;
+        transform: rotate(180deg);
+      }
+
+      /* Carousel Swiper */
+      .swiper {
+        width: 100%;
+        height: 400px;
+        border-radius: 15px;
+      }
+      .swiper-slide img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      @keyframes spin {
+        from {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(360deg);
+        }
+      }
+      .music-spin {
+        animation: spin 4s linear infinite;
+      }
+
+      #welcome-screen {
+        transition: transform 1s cubic-bezier(0.77, 0, 0.175, 1);
+      }
+      .bg-hero {
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)
+          ),
+          url("https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=2000");
+        background-size: cover;
+        background-position: center;
+      }
+    </style>
+  </head>
+  <body class="bg-stone-50 text-stone-800 overflow-hidden">
+    <div
+      id="welcome-screen"
+      class="fixed inset-0 z-50 flex items-center justify-center bg-hero text-white"
+    >
+      <img
+        src="aset gambar"
+        class="floral-corner floral-top-left"
+      />
+      <div class="text-center p-6 relative z-20">
+        <p class="uppercase tracking-[0.3em] mb-4 text-sm">The Wedding of</p>
+        <h1 class="font-wedding text-7xl md:text-8xl mb-8">Romeo & Juliet</h1>
+        <div
+          class="bg-white/10 backdrop-blur-md p-6 rounded-lg mb-8 inline-block border border-white/20"
+        >
+          <p class="text-sm mb-2 italic">Kepada Yth. Bapak/Ibu/Saudara/i:</p>
+          <h2 id="guest-name" class="text-2xl font-bold tracking-wide">
+            [Nama Tamu]
+          </h2>
+        </div>
+        <br />
+        <button
+          onclick="startInvitation()"
+          class="bg-amber-700 hover:bg-amber-800 text-white px-10 py-3 rounded-full shadow-xl"
+        >
+          Buka Undangan
+        </button>
+      </div>
+      <img
+        src="aset gambar"
+        class="floral-corner floral-bottom-right"
+      />
+    </div>
+
+    <main id="main-content" class="hidden relative">
+      <audio id="bg-music" loop>
+        <source
+          src="assets/audio/bg.mp3"
+          type="audio/mpeg"
+        />
+      </audio>
+
+      <div id="music-control" class="fixed bottom-5 right-5 z-40">
+        <button
+          onclick="toggleMusic()"
+          id="music-btn"
+          class="bg-amber-700 text-white p-3 rounded-full shadow-2xl music-spin border-2 border-white"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-6 w-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3"
+            />
+          </svg>
+        </button>
+      </div>
+
+      <section class="py-20 px-6 bg-white text-center relative overflow-hidden">
+        <div class="max-w-2xl mx-auto" data-aos="fade-up">
+          <h2 class="font-wedding text-4xl text-amber-700 mb-6">
+            The Love Story
+          </h2>
+          <p class="italic text-stone-600 leading-relaxed">
+            "Dan di antara tanda-tanda kekuasaan-Nya ialah Dia menciptakan
+            untukmu istri-istri dari jenismu sendiri, supaya kamu’cenderung dan
+            merasa tenteram kepadanya, dan dijadikan-Nya di antaramu rasa kasih
+            dan sayang. Sesungguhnya pada yang demikian itu benar-benar terdapat
+            tanda-tanda bagi Kaum yang berpikir,"
+          </p>
+          <p class="mt-4 font-bold text-sm">— QS. Ar-Rum: 21.</p>
+        </div>
+      </section>
+
+      <section class="py-20 px-6 bg-stone-50 relative overflow-hidden">
+        <img
+          src="https://www.transparentpng.com/download/floral/flower-frame-wedding-invitation-decoration-9.png"
+          class="absolute -top-10 -right-10 w-40 opacity-20 rotate-90 hidden md:block"
+        />
+        <img
+          src="https://www.transparentpng.com/download/floral/flower-frame-wedding-invitation-decoration-9.png"
+          class="absolute -bottom-10 -left-10 w-40 opacity-20 -rotate-90 hidden md:block"
+        />
+
+        <div class="max-w-6xl mx-auto text-center relative z-10">
+          <div data-aos="fade-up">
+            <h2 class="font-wedding text-5xl text-amber-800 mb-4">
+              Assalamu’alaikum Wr. Wb.
+            </h2>
+            <p class="max-w-2xl mx-auto mb-16 text-stone-600 italic px-4">
+              Tanpa mengurangi rasa hormat, kami mengundang Bapak/Ibu/Saudara/i
+              untuk menghadiri hari bahagia kami:
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+            <div data-aos="fade-right" class="order-1">
+              <div class="relative inline-block mb-6">
+                <div
+                  class="absolute inset-0 border-2 border-amber-700 rounded-full translate-x-3 translate-y-3"
+                ></div>
+                <img
+                  src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?q=80&w=500"
+                  class="relative w-48 h-48 md:w-56 md:h-56 mx-auto rounded-full object-cover border-4 border-white shadow-xl"
+                  alt="Mempelai Pria"
+                />
+              </div>
+              <h3 class="font-wedding text-4xl text-amber-800 mb-2">
+                Romeo Montague, S.T.
+              </h3>
+              <p
+                class="font-bold text-stone-700 mb-4 tracking-wide uppercase text-xs"
+              >
+                Putra Pertama
+              </p>
+              <div class="text-stone-600">
+                <p class="text-xs italic mb-1 text-amber-700">Putra dari:</p>
+                <p class="font-serif text-lg font-semibold leading-tight">
+                  Bapak Lord Montague
+                </p>
+                <p class="font-serif text-lg font-semibold leading-tight">
+                  & Ibu Lady Montague
+                </p>
+              </div>
+            </div>
+
+            <div data-aos="zoom-in" class="order-2 py-8 md:py-0">
+              <span
+                class="font-wedding text-7xl md:text-9xl text-amber-700 opacity-30 select-none block md:rotate-0"
+                >&</span
+              >
+            </div>
+
+            <div data-aos="fade-left" class="order-3">
+              <div class="relative inline-block mb-6">
+                <div
+                  class="absolute inset-0 border-2 border-amber-700 rounded-full -translate-x-3 translate-y-3"
+                ></div>
+                <img
+                  src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?q=80&w=500"
+                  class="relative w-48 h-48 md:w-56 md:h-56 mx-auto rounded-full object-cover border-4 border-white shadow-xl"
+                  alt="Mempelai Wanita"
+                />
+              </div>
+              <h3 class="font-wedding text-4xl text-amber-800 mb-2">
+                Juliet Capulet, M.Ds.
+              </h3>
+              <p
+                class="font-bold text-stone-700 mb-4 tracking-wide uppercase text-xs"
+              >
+                Putri Bungsu
+              </p>
+              <div class="text-stone-600">
+                <p class="text-xs italic mb-1 text-amber-700">Putri dari:</p>
+                <p class="font-serif text-lg font-semibold leading-tight">
+                  Bapak Lord Capulet
+                </p>
+                <p class="font-serif text-lg font-semibold leading-tight">
+                  & Ibu Lady Capulet
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="py-10 px-6 bg-stone-50">
+        <div class="max-w-4xl mx-auto" data-aos="zoom-in">
+          <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img
+                  src="https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=800"
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?q=80&w=800"
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?q=80&w=800"
+                />
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </section>
+      <!-- Countdown -->
+      <section
+        class="min-h-screen flex flex-col items-center justify-center p-6 bg-white relative overflow-hidden"
+      >
+        <img
+          src="https://www.transparentpng.com/download/floral/floral-elements-png-17.png"
+          class="floral-element top-0 right-0 w-64 opacity-20"
+        />
+
+        <div
+          class="max-w-3xl mx-auto text-center relative z-10"
+          data-aos="fade-up"
+        >
+          <h2 class="font-wedding text-5xl text-amber-800 mb-4">
+            Romeo & Juliet
+          </h2>
+          <p class="font-serif italic text-lg text-stone-600 mb-8">
+            Menuju Hari Bahagia
+          </p>
+
+          <div
+            id="countdown"
+            class="flex gap-3 md:gap-6 justify-center items-center"
+          ></div>
+
+          <div class="mt-10">
+            <p class="text-xs uppercase tracking-[0.3em] text-stone-400">
+              Minggu, 25 Desember 2025
+            </p>
+          </div>
+        </div>
+      </section>
+      <!--  -->
+      <section class="py-20 px-6 bg-white">
+        <div class="max-w-5xl mx-auto text-center">
+          <h2 class="font-serif text-4xl mb-12" data-aos="fade-up">
+            Lokasi Acara
+          </h2>
+          <div
+            class="rounded-2xl overflow-hidden shadow-xl mb-8 h-80 border-4 border-white"
+            data-aos="fade-up"
+          >
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.521260322283!2d106.81956835000001!3d-6.1947413!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f42167d64385%3A0x660851f5086a67a5!2sBundaran%20HI!5e0!3m2!1sid!2sid!4v1625000000000!5m2!1sid!2sid"
+              width="100%"
+              height="100%"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+            ></iframe>
+          </div>
+        </div>
+      </section>
+
+      <section class="py-20 px-6 bg-stone-100 text-center">
+        <div
+          class="max-w-md mx-auto bg-white p-8 rounded-3xl shadow-lg border border-amber-100"
+          data-aos="flip-left"
+        >
+          <h2 class="font-serif text-2xl mb-6">Kirim Hadiah</h2>
+          <p class="text-sm mb-6 italic">
+            Doa restu Anda adalah hadiah terindah, namun jika ingin memberi
+            lebih, Anda dapat scan QR berikut:
+          </p>
+          <div class="flex justify-center mb-4">
+            <img
+              src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=RomeoJulietWedding"
+              alt="QR Code"
+              class="border-4 border-stone-800 p-2"
+            />
+          </div>
+          <p class="font-bold">Bank BCA</p>
+          <p class="text-amber-700 tracking-widest uppercase">1234 5678 90</p>
+          <p class="text-xs">A/N Romeo Montague</p>
+        </div>
+      </section>
+
+      <section class="py-20 px-6 bg-white">
+        <div
+          class="max-w-lg mx-auto bg-white p-8 rounded-3xl shadow-2xl border border-stone-100"
+        >
+          <h2 class="text-3xl font-serif text-center mb-8 italic">Buku Tamu</h2>
+          <form id="rsvp-form" class="space-y-4">
+            <input
+              type="text"
+              id="form-name"
+              placeholder="Nama Anda"
+              class="w-full p-4 bg-stone-50 border border-stone-200 rounded-xl"
+              required
+            />
+            <textarea
+              id="form-msg"
+              placeholder="Tulis Ucapan Anda..."
+              class="w-full p-4 bg-stone-50 border border-stone-200 rounded-xl h-32"
+              required
+            ></textarea>
+            <button
+              type="submit"
+              class="w-full bg-amber-700 text-white font-bold py-4 rounded-xl shadow-lg"
+            >
+              Kirim Via WhatsApp
+            </button>
+          </form>
+          <div
+            id="guest-list"
+            class="mt-8 space-y-4 max-h-60 overflow-y-auto"
+          ></div>
+        </div>
+      </section>
+
+      <footer
+        class="py-12 text-center bg-stone-900 text-stone-500 relative overflow-hidden"
+      >
+        <div class="relative z-10">
+          <p class="font-wedding text-3xl text-amber-700 mb-4">
+            Romeo & Juliet
+          </p>
+          <p class="text-[10px] tracking-[0.3em] uppercase mb-8">
+            Arriving 25 . 12 . 2025
+          </p>
+          <div class="w-12 h-px bg-stone-700 mx-auto mb-8"></div>
+          <p class="text-[10px]">
+            &copy; 2025 Wedding Invitation. Made with ❤️
+          </p>
+        </div>
+      </footer>
+    </main>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/luminous-lightbox/2.3.2/Luminous.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
