@@ -21,6 +21,7 @@ This is a wedding application built with HTML, Javascript and Tailwind CSS. It a
 
   ```bash
   cd wedding-apps
+  code . (if u use vs code)
   ```
 4. Start the development server:
 
