@@ -6,9 +6,8 @@ This is a wedding application built with HTML, Javascript and Tailwind CSS. It a
 ## Features
 
 - Display guest information
-- RSVP functionality
+- Google Maps
 - Wedding event details
 - Photo gallery
-- Gift registry
 
 
