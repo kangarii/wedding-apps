@@ -27,4 +27,9 @@ This is a wedding application built with HTML, Javascript and Tailwind CSS. It a
 ```
 open with live server
 ```
+5. How to change guest name
+  ```
+  add ?to=guest_name
+  example "https://wedding-apps-nine.vercel.app/?to=Ari_Gunawan"
+  ```
 
