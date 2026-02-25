@@ -1,9 +1,14 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="id">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Undangan Pernikahan - Romeo & Juliet</title>
+    <title>Undangan Pernikahan - Yunus & Shofy</title>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="https://cdn-icons-png.flaticon.com/512/4155/4155044.png"
+    />
 
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
@@ -80,28 +85,27 @@
         transition: transform 1s cubic-bezier(0.77, 0, 0.175, 1);
       }
       .bg-hero {
-        background-image: linear-gradient(
-            rgba(0, 0, 0, 0.5),
-            rgba(0, 0, 0, 0.5)
-          ),
-          url("https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=2000");
+        background-image:
+          linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+          url("/assets/img/welcome-image.jpg");
         background-size: cover;
         background-position: center;
       }
     </style>
   </head>
   <body class="bg-stone-50 text-stone-800 overflow-hidden">
+    <!-- welcome screen -->
     <div
       id="welcome-screen"
       class="fixed inset-0 z-50 flex items-center justify-center bg-hero text-white"
     >
-      <img
-        src="aset gambar"
-        class="floral-corner floral-top-left"
-      />
+      <!-- <img
+        src="../assets/img/to-left.png"
+        class="floral-corner floral-top-left w-64"
+      /> -->
       <div class="text-center p-6 relative z-20">
         <p class="uppercase tracking-[0.3em] mb-4 text-sm">The Wedding of</p>
-        <h1 class="font-wedding text-7xl md:text-8xl mb-8">Romeo & Juliet</h1>
+        <h1 class="font-wedding text-7xl md:text-8xl mb-8">Yunus & Shofy</h1>
         <div
           class="bg-white/10 backdrop-blur-md p-6 rounded-lg mb-8 inline-block border border-white/20"
         >
@@ -118,18 +122,12 @@
           Buka Undangan
         </button>
       </div>
-      <img
-        src="aset gambar"
-        class="floral-corner floral-bottom-right"
-      />
+      <!-- <img src="./assets/img/" class="floral-corner floral-bottom-right w-64" /> -->
     </div>
 
     <main id="main-content" class="hidden relative">
       <audio id="bg-music" loop>
-        <source
-          src="assets/audio/bg.mp3"
-          type="audio/mpeg"
-        />
+        <source src="assets/audio/bg.mp3" type="audio/mpeg" />
       </audio>
 
       <div id="music-control" class="fixed bottom-5 right-5 z-40">
@@ -152,22 +150,7 @@
         </button>
       </div>
 
-      <section class="py-20 px-6 bg-white text-center relative overflow-hidden">
-        <div class="max-w-2xl mx-auto" data-aos="fade-up">
-          <h2 class="font-wedding text-4xl text-amber-700 mb-6">
-            The Love Story
-          </h2>
-          <p class="italic text-stone-600 leading-relaxed">
-            "Dan di antara tanda-tanda kekuasaan-Nya ialah Dia menciptakan
-            untukmu istri-istri dari jenismu sendiri, supaya kamu’cenderung dan
-            merasa tenteram kepadanya, dan dijadikan-Nya di antaramu rasa kasih
-            dan sayang. Sesungguhnya pada yang demikian itu benar-benar terdapat
-            tanda-tanda bagi Kaum yang berpikir,"
-          </p>
-          <p class="mt-4 font-bold text-sm">— QS. Ar-Rum: 21.</p>
-        </div>
-      </section>
-
+      <!-- Mempelai Section -->
       <section class="py-20 px-6 bg-stone-50 relative overflow-hidden">
         <img
           src="https://www.transparentpng.com/download/floral/flower-frame-wedding-invitation-decoration-9.png"
@@ -180,12 +163,17 @@
 
         <div class="max-w-6xl mx-auto text-center relative z-10">
           <div data-aos="fade-up">
-            <h2 class="font-wedding text-5xl text-amber-800 mb-4">
-              Assalamu’alaikum Wr. Wb.
+            <h2 class="font-wedding text-lg md:text-2xl text-amber-800 mb-4">
+              بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيم
+            </h2>
+            <h2 class="font-wedding text-2xl md:text-4xl text-amber-800 mb-4">
+              اَلسَّلَامُ عَلَيْكُمْ وَرَحْمَةُ اللّٰهِ وَبَرَكَاتُهُ
             </h2>
             <p class="max-w-2xl mx-auto mb-16 text-stone-600 italic px-4">
-              Tanpa mengurangi rasa hormat, kami mengundang Bapak/Ibu/Saudara/i
-              untuk menghadiri hari bahagia kami:
+              Dengan memohon rahmat dan ridho Allah SWT, kami bermaksud
+              menyelenggarakan pernikahan putra-putri kami: Nurusshofi Mempelai
+              Wanita Putri dari Bapak Hj. Junaedi & Ibu Damah dengan Yunus
+              Mempelai Pria Putra dari Bapak Huzaemi & Ibu Sopiah
             </p>
           </div>
 
@@ -196,26 +184,26 @@
                   class="absolute inset-0 border-2 border-amber-700 rounded-full translate-x-3 translate-y-3"
                 ></div>
                 <img
-                  src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?q=80&w=500"
+                  src="./assets/img/profile/yunus.JPG"
                   class="relative w-48 h-48 md:w-56 md:h-56 mx-auto rounded-full object-cover border-4 border-white shadow-xl"
                   alt="Mempelai Pria"
                 />
               </div>
               <h3 class="font-wedding text-4xl text-amber-800 mb-2">
-                Romeo Montague, S.T.
+                Mohammad Yunus
               </h3>
               <p
                 class="font-bold text-stone-700 mb-4 tracking-wide uppercase text-xs"
               >
-                Putra Pertama
+                Putra Keempat
               </p>
               <div class="text-stone-600">
                 <p class="text-xs italic mb-1 text-amber-700">Putra dari:</p>
                 <p class="font-serif text-lg font-semibold leading-tight">
-                  Bapak Lord Montague
+                  Alm. Bapak Huzaemi
                 </p>
                 <p class="font-serif text-lg font-semibold leading-tight">
-                  & Ibu Lady Montague
+                  & Ibu Sopiah
                 </p>
               </div>
             </div>
@@ -233,56 +221,117 @@
                   class="absolute inset-0 border-2 border-amber-700 rounded-full -translate-x-3 translate-y-3"
                 ></div>
                 <img
-                  src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?q=80&w=500"
+                  src="./assets/img/profile/shofy.JPG"
                   class="relative w-48 h-48 md:w-56 md:h-56 mx-auto rounded-full object-cover border-4 border-white shadow-xl"
                   alt="Mempelai Wanita"
                 />
               </div>
               <h3 class="font-wedding text-4xl text-amber-800 mb-2">
-                Juliet Capulet, M.Ds.
+                Nurusshofi Hamalatil Jannah
               </h3>
               <p
                 class="font-bold text-stone-700 mb-4 tracking-wide uppercase text-xs"
               >
-                Putri Bungsu
+                Putri Pertama
               </p>
               <div class="text-stone-600">
                 <p class="text-xs italic mb-1 text-amber-700">Putri dari:</p>
                 <p class="font-serif text-lg font-semibold leading-tight">
-                  Bapak Lord Capulet
+                  Bapak H. Junaedi, S.Ag
                 </p>
                 <p class="font-serif text-lg font-semibold leading-tight">
-                  & Ibu Lady Capulet
+                  & Ibu Hj. Damah
                 </p>
               </div>
             </div>
           </div>
         </div>
       </section>
+
+      <!-- Love Story -->
+      <section class="py-20 px-6 bg-white text-center relative overflow-hidden">
+        <div class="max-w-2xl mx-auto" data-aos="fade-up">
+          <h2 class="font-wedding text-4xl text-amber-700 mb-6">
+            The Love Story
+          </h2>
+          <p class="italic text-stone-600 leading-relaxed">
+            "Dan di antara tanda-tanda kekuasaan-Nya ialah Dia menciptakan
+            untukmu istri-istri dari jenismu sendiri, supaya kamu’cenderung dan
+            merasa tenteram kepadanya, dan dijadikan-Nya di antaramu rasa kasih
+            dan sayang. Sesungguhnya pada yang demikian itu benar-benar terdapat
+            tanda-tanda bagi Kaum yang berpikir,"
+          </p>
+          <p class="mt-4 font-bold text-sm">— QS. Ar-Rum: 21.</p>
+        </div>
+      </section>
+
+      <!-- Akad -->
+      <section class="py-20 px-6 bg-white text-center relative overflow-hidden">
+        <div
+          class="mx-auto bg-white p-8 rounded-3xl shadow-lg border border-amber-100 text-center max-w-4xl"
+          data-aos="fade-up"
+        >
+          <div class="flex md:flex-row items-center justify-center flex-col">
+            <div class="p-4">
+              <h2 class="font-wedding text-4xl text-amber-800 mb-6">
+                Akad Nikah
+              </h2>
+              <p class="text-stone-700 mb-4">
+                Minggu, 12 April 2026<br />
+                Pukul 09.00 WIB - Selesai<br />
+              </p>
+            </div>
+            <div class="p-4">
+              <h2 class="font-wedding text-4xl text-amber-800 mb-6">&</h2>
+            </div>
+            <div class="p-4">
+              <h2 class="font-wedding text-4xl text-amber-800 mb-6">
+                Resepsi Pernikahan
+              </h2>
+              <p class="text-stone-700 mb-4">
+                Minggu, 12 April 2026<br />
+                Pukul 11.00 WIB - Selesai<br />
+              </p>
+            </div>
+          </div>
+          <div>
+            <p class="italic text-sm text-stone-600">
+              *Mohon hadir tepat waktu dan kenakan pakaian sopan.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Gallery Carousel -->
       <section class="py-10 px-6 bg-stone-50">
-        <div class="max-w-4xl mx-auto" data-aos="zoom-in">
+        <div class="max-w-4xl mx-auto text-center" data-aos="zoom-in">
+          <h2 class="font-wedding text-4xl text-amber-700 mb-6">Galeri Foto</h2>
           <div class="swiper mySwiper">
             <div class="swiper-wrapper">
               <div class="swiper-slide">
-                <img
-                  src="https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=800"
-                />
+                <img src="./assets/img/carousel/1.jpg" />
               </div>
               <div class="swiper-slide">
-                <img
-                  src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?q=80&w=800"
-                />
+                <img src="./assets/img/carousel/2.jpg" />
               </div>
               <div class="swiper-slide">
-                <img
-                  src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?q=80&w=800"
-                />
+                <img src="./assets/img/carousel/3.jpg" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./assets/img/carousel/4.jpg" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./assets/img/carousel/5.jpg" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./assets/img/carousel/6.jpg" />
               </div>
             </div>
             <div class="swiper-pagination"></div>
           </div>
         </div>
       </section>
+
       <!-- Countdown -->
       <section
         class="min-h-screen flex flex-col items-center justify-center p-6 bg-white relative overflow-hidden"
@@ -297,7 +346,7 @@
           data-aos="fade-up"
         >
           <h2 class="font-wedding text-5xl text-amber-800 mb-4">
-            Romeo & Juliet
+            Yunus & Shofy
           </h2>
           <p class="font-serif italic text-lg text-stone-600 mb-8">
             Menuju Hari Bahagia
@@ -310,34 +359,62 @@
 
           <div class="mt-10">
             <p class="text-xs uppercase tracking-[0.3em] text-stone-400">
-              Minggu, 25 Desember 2025
+              Minggu, 12 April 2026
             </p>
           </div>
         </div>
       </section>
-      <!--  -->
-      <section class="py-20 px-6 bg-white">
-        <div class="max-w-5xl mx-auto text-center">
-          <h2 class="font-serif text-4xl mb-12" data-aos="fade-up">
-            Lokasi Acara
-          </h2>
-          <div
-            class="rounded-2xl overflow-hidden shadow-xl mb-8 h-80 border-4 border-white"
+
+      <!-- Lokasi Acara -->
+      <section
+        class="py-20 px-6 bg-stone-50 text-center relative overflow-hidden"
+      >
+        <div
+          class="mx-auto bg-white p-8 rounded-3xl shadow-lg border border-amber-100 text-center max-w-6xl"
+          data-aos="fade-up"
+        >
+          <h2
+            class="font-wedding font-bold text-4xl mb-4 mt-4"
             data-aos="fade-up"
           >
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.521260322283!2d106.81956835000001!3d-6.1947413!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f42167d64385%3A0x660851f5086a67a5!2sBundaran%20HI!5e0!3m2!1sid!2sid!4v1625000000000!5m2!1sid!2sid"
-              width="100%"
-              height="100%"
-              style="border: 0"
-              allowfullscreen=""
-              loading="lazy"
-            ></iframe>
+            Lokasi Acara
+          </h2>
+          <div class="flex md:flex-row items-center justify-center flex-col">
+            <div class="p-2">
+              <h2 class="font-serif text-4xl text-amber-800 mb-6">
+                Gedung Aula <br />
+                Kecamatan Pontang
+              </h2>
+              <p class="text-stone-700 mb-4">
+                Jl. Raya Kubang Puji Banten Lama<br />
+                Kecamatan Pontang<br />
+                Kota Serang - Banten 42192<br />
+              </p>
+            </div>
+            <div class="px-10">
+              <h2 class="hidden md:block text-4xl text-amber-800">|</h2>
+            </div>
+            <div class="p-2">
+              <div
+                class="rounded-2xl overflow-hidden shadow-xl mb-8 h-80 border-4 border-white"
+                data-aos="fade-up"
+              >
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3967.9020898180866!2d106.2795543!3d-6.008180899999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e41f13054861c75%3A0x994b98ebba68a027!2sGedung%20Aula%20Kecamatan%20Pontang!5e0!3m2!1sid!2sid!4v1769139844210!5m2!1sid!2sid"
+                  width="100%"
+                  height="100%"
+                  style="border: 0"
+                  allowfullscreen=""
+                  loading="lazy"
+                ></iframe>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      <section class="py-20 px-6 bg-stone-100 text-center">
+      <!-- Hadiah -->
+      <section class="py-20 px-6 bg-white text-center">
         <div
           class="max-w-md mx-auto bg-white p-8 rounded-3xl shadow-lg border border-amber-100"
           data-aos="flip-left"
@@ -360,6 +437,7 @@
         </div>
       </section>
 
+      <!-- RSPV -->
       <section class="py-20 px-6 bg-white">
         <div
           class="max-w-lg mx-auto bg-white p-8 rounded-3xl shadow-2xl border border-stone-100"
@@ -393,22 +471,21 @@
         </div>
       </section>
 
+      <!-- FOoter -->
       <footer
         class="py-12 text-center bg-stone-900 text-stone-500 relative overflow-hidden"
       >
         <div class="relative z-10">
-          <p class="font-wedding text-3xl text-amber-700 mb-4">
-            Romeo & Juliet
-          </p>
+          <p class="font-wedding text-3xl text-amber-700 mb-4">Yunus & Shofy</p>
           <p class="text-[10px] tracking-[0.3em] uppercase mb-8">
-            Arriving 25 . 12 . 2025
+            Arriving 12 . 04 . 2026
           </p>
           <div class="w-12 h-px bg-stone-700 mx-auto mb-8"></div>
           <p class="text-[10px]">
             &copy; 2025 Wedding Invitation. Made with ❤️
           </p>
           <p class="text-[10px]">
-            <a href="https://github.com/kangarii">kangarii</a>
+            <a href="https://www.instagram.com/kangujnx">UJNX`Design</a>
           </p>
         </div>
       </footer>
