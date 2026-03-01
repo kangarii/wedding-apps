@@ -176,5 +176,11 @@ function updateTimer() {
 // Jalankan fungsi setiap 1 detik
 setInterval(updateTimer, 1000);
 
+document.addEventListener("contextmenu", e => e.preventDefault());
+
+document.onkeydown = function(e) {
+  if (e.key === "F12") return false;
+};
+
 // Panggil sekali di awal agar tidak menunggu 1 detik saat halaman dimuat
 updateTimer();
