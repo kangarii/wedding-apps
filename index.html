@@ -25,73 +25,14 @@
       href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
       rel="stylesheet"
     />
-
-    <style>
-      body {
-        font-family: "Montserrat", sans-serif;
-        scroll-behavior: smooth;
-      }
-      .font-wedding {
-        font-family: "Great Vibes", cursive;
-      }
-      .font-serif {
-        font-family: "Playfair Display", serif;
-      }
-
-      /* Hiasan Bunga (Floral) */
-      .floral-corner {
-        position: absolute;
-        width: 150px;
-        opacity: 0.6;
-        pointer-events: none;
-        z-index: 10;
-      }
-      .floral-top-left {
-        top: 0;
-        left: 0;
-        transform: rotate(0deg);
-      }
-      .floral-bottom-right {
-        bottom: 0;
-        right: 0;
-        transform: rotate(180deg);
-      }
-
-      /* Carousel Swiper */
-      .swiper {
-        width: 100%;
-        height: 400px;
-        border-radius: 15px;
-      }
-      .swiper-slide img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
-
-      @keyframes spin {
-        from {
-          transform: rotate(0deg);
-        }
-        to {
-          transform: rotate(360deg);
-        }
-      }
-      .music-spin {
-        animation: spin 4s linear infinite;
-      }
-
-      #welcome-screen {
-        transition: transform 1s cubic-bezier(0.77, 0, 0.175, 1);
-      }
-      .bg-hero {
-        background-image:
-          linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-          url("/assets/img/welcome-image.jpg");
-        background-size: cover;
-        background-position: center;
-      }
-    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link href="./output.css" rel="stylesheet" />
   </head>
   <body class="bg-stone-50 text-stone-800 overflow-hidden">
     <!-- welcome screen -->
@@ -248,12 +189,10 @@
         </div>
       </section>
 
-      <!-- Love Story -->
+      <!-- Quote -->
       <section class="py-20 px-6 bg-white text-center relative overflow-hidden">
         <div class="max-w-2xl mx-auto" data-aos="fade-up">
-          <h2 class="font-wedding text-4xl text-amber-700 mb-6">
-            The Love Story
-          </h2>
+          <h2 class="font-wedding text-4xl text-amber-700 mb-6">Quote</h2>
           <p class="italic text-stone-600 leading-relaxed">
             "Dan di antara tanda-tanda kekuasaan-Nya ialah Dia menciptakan
             untukmu istri-istri dari jenismu sendiri, supaya kamu’cenderung dan
@@ -299,6 +238,91 @@
               *Mohon hadir tepat waktu dan kenakan pakaian sopan.
             </p>
           </div>
+        </div>
+      </section>
+
+      <!-- Love Story-->
+      <section class="py-20 px-6 bg-white text-center relative overflow-hidden">
+        <div
+          class="mx-auto bg-white p-8 rounded-3xl shadow-lg border border-amber-100 text-center max-w-4xl"
+          data-aos="fade-up"
+        >
+          <h2 class="font-wedding text-4xl text-amber-700">Love Story</h2>
+          <div class="flex items-center justify-center mb-5">
+            <div class="h-px w-16 bg-amber-300"></div>
+
+            <span class="text-amber-600 text-xl">&nbsp;♥&nbsp;</span>
+
+            <div class="h-px w-16 bg-amber-300"></div>
+          </div>
+          <div
+            class="h-80 w-full bg-cover bg-center rounded-xl shadow-lg"
+            style="background-image: url(&quot;/assets/img/love/1.png&quot;)"
+          ></div>
+          <div class="items-center justify-center mt-14">
+            <h2
+              data-aos="fade-up"
+              class="text-4xl text-amber-700 font-wedding p-2"
+            >
+              Awal Bertemu
+            </h2>
+            <div
+              data-aos="fade-up"
+              class="h-px w-full bg-amber-300 mt-2 mb-2"
+            ></div>
+            <p data-aos="fade-up" class="p-2">
+              Tidak ada pertemuan yang kebetulan, sebab setiap kisah telah
+              ditulis oleh Sang Maha Pencipta. Kami dipertemukan pertama kali
+              melalui media sosial, lalu bertemu pada Desember 2013 saat masih
+              mengenakan seragam SMA, meski berada di sekolah yang berbeda.
+              Kedekatan sederhana itu meninggalkan kenangan manis yang tak
+              terlupakan. Waktu sempat memisahkan langkah kami, namun takdir
+              kembali menyatukan hati di akhir tahun 2022. Dari pertemuan kedua
+              itu, rasa tumbuh semakin kuat, hingga kami saling mengenal
+              keluarga dan yakin untuk melangkah bersama, mengikat janji suci
+              dalam sebuah pernikahan.
+            </p>
+          </div>
+          <div class="items-center justify-center mt-14">
+            <h2
+              data-aos="fade-up"
+              class="text-4xl text-amber-700 font-wedding p-2"
+            >
+              Lamaran
+            </h2>
+            <div
+              data-aos="fade-up"
+              class="h-px w-full bg-amber-300 mt-2 mb-2"
+            ></div>
+            <p data-aos="fade-up" class="p-2">
+              Setelah drama perjalanan yg cukup panjang di lalui bersama pada
+              beberapa tahun tersebut, akhirnya kami menyakini bahwa ini adalah
+              jalan terbaik hingga sampai membawa ke titik ini yaitu pada sebuah
+              ikatan suci. lalu kami melangsungkan lamaran pada tanggal 28
+              Januari 2026
+            </p>
+          </div>
+          <div class="items-center justify-center mt-14 mb-20">
+            <h2
+              data-aos="fade-up"
+              class="text-4xl text-amber-700 font-wedding p-2"
+            >
+              Pernikahan
+            </h2>
+            <div
+              data-aos="fade-up"
+              class="h-px w-full bg-amber-300 mt-2 mb-2"
+            ></div>
+            <p data-aos="fade-up" class="p-2">
+              Percayalah, bukan karena bertemu lalu berjodoh tapi karena
+              berjodohlah maka kami dipertemukan, kami memutuskan untuk
+              mengikrarkan janji suci pernikahan kami Insya Allah di tanggal 12
+              April 2026/ 24 Syawal 1447 H. Sebagaimana yang pernah dikatakan
+              oleh Sayidina Ali bin Abi Thalib ” Apa yang menjadi takdirmu akan
+              menemukan jalannya untuk menemukanmu”
+            </p>
+          </div>
+          <div></div>
         </div>
       </section>
 
@@ -374,11 +398,18 @@
           data-aos="fade-up"
         >
           <h2
-            class="font-wedding font-bold text-4xl mb-4 mt-4"
+            class="font-wedding font-bold text-4xl mt-4 text-amber-800"
             data-aos="fade-up"
           >
             Lokasi Acara
           </h2>
+          <div class="flex items-center justify-center mb-5">
+            <div class="h-px w-20 bg-amber-300"></div>
+
+            <span class="text-amber-600 text-xl">&nbsp;◇&nbsp;</span>
+
+            <div class="h-px w-20 bg-amber-300"></div>
+          </div>
           <div class="flex md:flex-row items-center justify-center flex-col">
             <div class="p-2">
               <h2 class="font-serif text-4xl text-amber-800 mb-6">
@@ -416,7 +447,7 @@
       <!-- Hadiah -->
       <section class="py-20 px-6 bg-white text-center">
         <div
-          class="max-w-md mx-auto bg-white p-8 rounded-3xl shadow-lg border border-amber-100"
+          class="flex flex-col items-center justify-center max-w-2xl w-full mx-auto bg-white p-8 rounded-3xl shadow-lg border border-amber-100"
           data-aos="flip-left"
         >
           <h2 class="font-serif text-2xl mb-6">Kirim Hadiah</h2>
@@ -424,20 +455,50 @@
             Doa restu Anda adalah hadiah terindah, namun jika ingin memberi
             lebih, Anda dapat scan QR berikut:
           </p>
-          <div class="flex justify-center mb-4">
-            <img
-              src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=RomeoJulietWedding"
-              alt="QR Code"
-              class="border-4 border-stone-800 p-2"
-            />
+          <div>
+            <div class="flex flex-col items-center justify-center mb-1">
+              <div class="rounded-xl flex justify-center items-center">
+                <img src="assets/img/bank/bri.png" alt="QR Code" class="w-40" />
+              </div>
+            </div>
+            <p class="font-bold">Bank BRI</p>
+            <p id="rek1" class="text-amber-700 tracking-widest uppercase">
+              484901018712532
+            </p>
+            <p class="text-xs">A/N Nurusshofi Hamalatil Jannah</p>
+            <button
+              onclick="copyText('rek1', this)"
+              class="text-xs bg-amber-700 text-white px-3 py-1 rounded-lg hover:bg-amber-800 mt-2"
+            >
+              Copy
+            </button>
           </div>
-          <p class="font-bold">Bank BCA</p>
-          <p class="text-amber-700 tracking-widest uppercase">1234 5678 90</p>
-          <p class="text-xs">A/N Romeo Montague</p>
+          <div class="mt-9">
+            <div class="flex flex-col items-center justify-center mb-1">
+              <div class="rounded-xl flex justify-center items-center">
+                <img
+                  src="assets/img/bank/dana.png"
+                  alt="QR Code"
+                  class="w-40"
+                />
+              </div>
+            </div>
+            <p class="font-bold">Bank BRI</p>
+            <p id="rek2" class="text-amber-700 tracking-widest uppercase">
+              089504936130
+            </p>
+            <p class="text-xs">A/N Mohammad Yunus</p>
+            <button
+              onclick="copyText('rek2', this)"
+              class="text-xs bg-amber-700 text-white px-3 py-1 rounded-lg hover:bg-amber-800 mt-2"
+            >
+              Copy
+            </button>
+          </div>
         </div>
       </section>
 
-      <!-- RSPV -->
+      <!-- RSVP -->
       <section class="py-20 px-6 bg-white">
         <div
           class="max-w-lg mx-auto bg-white p-8 rounded-3xl shadow-2xl border border-stone-100"
@@ -468,6 +529,19 @@
             id="guest-list"
             class="mt-8 space-y-4 max-h-60 overflow-y-auto"
           ></div>
+        </div>
+      </section>
+      <!-- Thanks -->
+      <section class="py-20 px-6 bg-white text-center relative overflow-hidden">
+        <div class="max-w-2xl mx-auto" data-aos="fade-up">
+          <h2 class="font-wedding text-4xl text-amber-700 mb-6">
+            Terimakasih.
+          </h2>
+          <p class="italic text-stone-600 leading-relaxed">
+            Merupakan suatu kebahagiaan dan kehormatan bagi kami, apabila
+            Bapak/Ibu/Saudara/i, berkenan hadir dan memberikan do’a restu kepada
+            kami.
+          </p>
         </div>
       </section>
 

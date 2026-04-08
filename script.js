@@ -3,7 +3,7 @@
  */
 const CONFIG = {
   weddingDate: "Apr 12, 2026 08:00:00",
-  waNumber: "6281234567890",
+  waNumber: "6289504936130",
   defaultGuest: "Tamu Undangan",
 };
 
@@ -104,7 +104,15 @@ if (rsvpForm) {
     const name = document.getElementById("form-name").value;
     const msg = document.getElementById("form-msg").value;
 
-    const text = `Halo Romeo & Juliet, Saya *${name}* ingin mengonfirmasi kehadiran serta mendoakan: %0A%0A"${msg}"`;
+    const text = encodeURIComponent(
+      `Halo Yunus & Shoffy,
+
+Saya *${name}* ingin mengonfirmasi kehadiran serta mendoakan:
+
+"${msg}"
+
+Terima kasih 🙏`,
+    );
     window.open(
       `https://api.whatsapp.com/send?phone=${CONFIG.waNumber}&text=${text}`,
       "_blank",
@@ -172,13 +180,25 @@ function updateTimer() {
         </div>
     `;
 }
+function copyText(id, btn) {
+  const text = document.getElementById(id).innerText;
+
+  navigator.clipboard.writeText(text).then(() => {
+    const original = btn.innerText;
+    btn.innerText = "Copied!";
+
+    setTimeout(() => {
+      btn.innerText = original;
+    }, 1500);
+  });
+}
 
 // Jalankan fungsi setiap 1 detik
 setInterval(updateTimer, 1000);
 
-document.addEventListener("contextmenu", e => e.preventDefault());
+document.addEventListener("contextmenu", (e) => e.preventDefault());
 
-document.onkeydown = function(e) {
+document.onkeydown = function (e) {
   if (e.key === "F12") return false;
 };
 
