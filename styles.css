@@ -1,8 +1,6 @@
 body {
   font-family: "Montserrat", sans-serif;
   scroll-behavior: smooth;
-  background-image: url("assets/img/always-grey.png");
-  opacity: 0.9; /* atur tingkat tekstur (0.1 - 0.3 ideal) */
 }
 .font-wedding {
   font-family: "Great Vibes", cursive;
